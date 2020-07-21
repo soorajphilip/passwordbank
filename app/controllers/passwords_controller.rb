@@ -1,4 +1,4 @@
 class PasswordsController < ApplicationController
-	def new 
+	def show
 	end
 end
