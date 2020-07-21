@@ -1,11 +1,11 @@
-= form_with scope: :password,url: passwords_path, local: true do |form|
-  %p
-    = form.label :username
-    %br/
-    = form.text_field :username
-  %p
-    = form.label :password
-    %br/
-    = form.text_field :password
-  %p
-    = form.submit
+%h1 User Login
+%form
+  %label{:for => "fname"} Username:
+  %input#username{:name => "username", :type => "text"}/
+  %br/
+  %br/
+  %label{:for => "password"} Password:
+  %input#password{:name => "password", :type => "text"}/
+  %br/
+  %br/
+  %input{:type => "submit", :value => "Submit"}/
