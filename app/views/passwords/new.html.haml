@@ -1,0 +1,11 @@
+= form_with scope: :password,url: passwords_path, local: true do |form|
+  %p
+    = form.label :username
+    %br/
+    = form.text_field :username
+  %p
+    = form.label :password
+    %br/
+    = form.text_field :password
+  %p
+    = form.submit
