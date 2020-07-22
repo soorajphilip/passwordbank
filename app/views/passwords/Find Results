@@ -1,0 +1,177 @@
+Searching 134 files for "body"
+
+/Users/bijoysijo/railsprojects/pwdmgr/passwordbank/package-lock.json:
+ 1572        "integrity": "sha512-40rZaf3bUNKTVYu9sIeeEGOg7g14Yvnj9kH7b50EiwX0Q7A6umbvfI5tvHaOERH0XigqKkfLkFQxzb4e6CIXnA=="
+ 1573      },
+ 1574:     "body-parser": {
+ 1575        "version": "1.19.0",
+ 1576:       "resolved": "https://registry.npmjs.org/body-parser/-/body-parser-1.19.0.tgz",
+ 1577        "integrity": "sha512-dhEPs72UPbDnAQJ9ZKMNTP6ptJaionhP5cBb541nXPlW60Jepo9RV/a4fX4XWW9CuFNK22krhrj1+rgzifNCsw==",
+ 1578        "dev": true,
+ ....
+ 1586          "on-finished": "~2.3.0",
+ 1587          "qs": "6.7.0",
+ 1588:         "raw-body": "2.4.0",
+ 1589          "type-is": "~1.6.17"
+ 1590        },
+ ....
+ 3349          "accepts": "~1.3.7",
+ 3350          "array-flatten": "1.1.1",
+ 3351:         "body-parser": "1.19.0",
+ 3352          "content-disposition": "0.5.3",
+ 3353          "content-type": "~1.0.4",
+ ....
+ 6926        "dev": true
+ 6927      },
+ 6928:     "raw-body": {
+ 6929        "version": "2.4.0",
+ 6930:       "resolved": "https://registry.npmjs.org/raw-body/-/raw-body-2.4.0.tgz",
+ 6931        "integrity": "sha512-4Oz8DUIwdvoa5qMJelxipzi/iJIi40O5cGV1wNYp5hvZP8ZN0T+jiNkL0QepXs+EsQ9XJ8ipEDoiH70ySUJP3Q==",
+ 6932        "dev": true,
+
+/Users/bijoysijo/railsprojects/pwdmgr/passwordbank/yarn.lock:
+ 1423    integrity sha512-40rZaf3bUNKTVYu9sIeeEGOg7g14Yvnj9kH7b50EiwX0Q7A6umbvfI5tvHaOERH0XigqKkfLkFQxzb4e6CIXnA==
+ 1424
+ 1425: body-parser@1.19.0:
+ 1426    version "1.19.0"
+ 1427:   resolved "https://registry.yarnpkg.com/body-parser/-/body-parser-1.19.0.tgz#96b2709e57c9c4e09a6fd66a8fd979844f69f08a"
+ 1428    integrity sha512-dhEPs72UPbDnAQJ9ZKMNTP6ptJaionhP5cBb541nXPlW60Jepo9RV/a4fX4XWW9CuFNK22krhrj1+rgzifNCsw==
+ 1429    dependencies:
+ ....
+ 1436      on-finished "~2.3.0"
+ 1437      qs "6.7.0"
+ 1438:     raw-body "2.4.0"
+ 1439      type-is "~1.6.17"
+ 1440
+ ....
+ 2766      accepts "~1.3.7"
+ 2767      array-flatten "1.1.1"
+ 2768:     body-parser "1.19.0"
+ 2769      content-disposition "0.5.3"
+ 2770      content-type "~1.0.4"
+ ....
+ 5879    integrity sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==
+ 5880
+ 5881: raw-body@2.4.0:
+ 5882    version "2.4.0"
+ 5883:   resolved "https://registry.yarnpkg.com/raw-body/-/raw-body-2.4.0.tgz#a1ce6fb9c9bc356ca52e89256ab59059e13d0332"
+ 5884    integrity sha512-4Oz8DUIwdvoa5qMJelxipzi/iJIi40O5cGV1wNYp5hvZP8ZN0T+jiNkL0QepXs+EsQ9XJ8ipEDoiH70ySUJP3Q==
+ 5885    dependencies:
+
+/Users/bijoysijo/railsprojects/pwdmgr/passwordbank/app/controllers/passwords_controller.rb:
+   70      # Only allow a list of trusted parameters through.
+   71      def password_params
+   72:       params.require(:password).permit(:title, :password)
+   73      end
+   74  end
+
+/Users/bijoysijo/railsprojects/pwdmgr/passwordbank/app/views/layouts/application.html.haml:
+   14      %script{:crossorigin => "anonymous", :integrity => "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo", :src => "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"}
+   15      %script{:crossorigin => "anonymous", :integrity => "sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI", :src => "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"}
+   16:   %body
+   17      %p.notice= notice
+   18      %p.alert= alert
+
+/Users/bijoysijo/railsprojects/pwdmgr/passwordbank/app/views/layouts/mailer.html.erb:
+    8    </head>
+    9
+   10:   <body>
+   11      <%= yield %>
+   12:   </body>
+   13  </html>
+   14
+
+/Users/bijoysijo/railsprojects/pwdmgr/passwordbank/app/views/passwords/_password.json.jbuilder:
+    1: json.extract! password, :id, :title, :body, :user_id, :created_at, :updated_at
+    2  json.url password_url(password, format: :json)
+    3
+
+/Users/bijoysijo/railsprojects/pwdmgr/passwordbank/app/views/passwords/index.html.haml:
+   11        %th
+   12
+   13:   %tbody
+   14      - @passwords.each do |password|
+   15        %tr
+   16          %td= password.title
+   17:         %td= password.password
+   18          %td= link_to 'Show', password
+   19          %td= link_to 'Edit', edit_password_path(password)
+
+/Users/bijoysijo/railsprojects/pwdmgr/passwordbank/public/404.html:
+   55  </head>
+   56
+   57: <body class="rails-default-error-page">
+   58    <!-- This file lives in public/404.html -->
+   59    <div class="dialog">
+   ..
+   64      <p>If you are the application owner check the logs for more information.</p>
+   65    </div>
+   66: </body>
+   67  </html>
+   68
+
+/Users/bijoysijo/railsprojects/pwdmgr/passwordbank/public/422.html:
+   55  </head>
+   56
+   57: <body class="rails-default-error-page">
+   58    <!-- This file lives in public/422.html -->
+   59    <div class="dialog">
+   ..
+   64      <p>If you are the application owner check the logs for more information.</p>
+   65    </div>
+   66: </body>
+   67  </html>
+   68
+
+/Users/bijoysijo/railsprojects/pwdmgr/passwordbank/public/500.html:
+   55  </head>
+   56
+   57: <body class="rails-default-error-page">
+   58    <!-- This file lives in public/500.html -->
+   59    <div class="dialog">
+   ..
+   63      <p>If you are the application owner check the logs for more information.</p>
+   64    </div>
+   65: </body>
+   66  </html>
+   67
+
+/Users/bijoysijo/railsprojects/pwdmgr/passwordbank/test/controllers/passwords_controller_test.rb:
+   18    test "should create password" do
+   19      assert_difference('Password.count') do
+   20:       post passwords_url, params: { password: { password: @password.password, title: @password.title, user_id: @password.user_id } }
+   21      end
+   22
+   ..
+   35
+   36    test "should update password" do
+   37:     patch password_url(@password), params: { password: { password: @password.password, title: @password.title, user_id: @password.user_id } }
+   38      assert_redirected_to password_url(@password)
+   39    end
+
+/Users/bijoysijo/railsprojects/pwdmgr/passwordbank/test/fixtures/passwords.yml:
+    3  one:
+    4    title: MyString
+    5:   password: MyString
+    6    user: one
+    7
+    8  two:
+    9    title: MyString
+   10:   password: MyString
+   11    user: two
+   12
+
+/Users/bijoysijo/railsprojects/pwdmgr/passwordbank/test/system/passwords_test.rb:
+   15      click_on "New Password"
+   16
+   17:     fill_in "Password", with: @password.password
+   18      fill_in "Title", with: @password.title
+   19      fill_in "User", with: @password.user_id
+   ..
+   28      click_on "Edit", match: :first
+   29
+   30:     fill_in "Password", with: @password.password
+   31      fill_in "Title", with: @password.title
+   32      fill_in "User", with: @password.user_id
+
+39 matches across 13 files

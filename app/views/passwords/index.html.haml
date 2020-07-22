@@ -1,0 +1,26 @@
+%h1 Listing passwords
+
+%table
+  %thead
+    %tr
+      %th Title
+      %th Password
+      %th
+      %th
+      %th
+      %th
+
+  %tbody
+    - @passwords.each do |password|
+      %tr
+        %td= password.title
+        %td= password.password
+        %td= link_to 'Show', password
+        %td= link_to 'Edit', edit_password_path(password)
+        %td= link_to 'Destroy', password, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Password', new_password_path
+= link_to 'sign out', destroy_user_session_path, method: :delete
+

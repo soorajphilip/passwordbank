@@ -1,0 +1,16 @@
+= form_for @password do |f|
+  - if @password.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@password.errors.count, "error")} prohibited this password from being saved:"
+      %ul
+        - @password.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :password
+    = f.text_field :password
+  .actions
+    = f.submit 'Save'
