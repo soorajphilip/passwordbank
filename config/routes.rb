@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
+  resources :passwords
   devise_for :users
-  root 'users#index'
+  root 'passwords#index'
 end
 
