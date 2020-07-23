@@ -5,7 +5,13 @@ Rails.application.routes.draw do
   # end
   devise_for :users
   devise_scope :user do
-    root 'devise/sessions#new'
+    authenticated do
+      root 'passwords#index'
+    end
+
+    unauthenticated do
+      root 'devise/sessions#new', as: 'unauthenticated_root'
+    end
   end
 end
 
