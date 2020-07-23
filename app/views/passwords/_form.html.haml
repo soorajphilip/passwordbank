@@ -1,16 +1,23 @@
-= form_for @password do |f|
-  - if @password.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@password.errors.count, "error")} prohibited this password from being saved:"
-      %ul
-        - @password.errors.full_messages.each do |message|
-          %li= message
+.row
+  .col-md-4.col-md-offset-6
+    = form_for @password do |f|
+      - if @password.errors.any?
+        #error_explanation
+          %h2= "#{pluralize(@password.errors.count, "error")} prohibited this password from being saved:"
+          %ul
+            - @password.errors.full_messages.each do |message|
+              %li= message
 
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :password
-    = f.text_field :password
-  .actions
-    = f.submit 'Save'
+      .field
+        = f.label :title
+        %br
+        = f.text_field :title
+        %br
+      .field
+        %br
+        = f.label :password
+        %br
+        = f.text_field :password
+      .actions
+      %br
+        = f.submit 'Save'
