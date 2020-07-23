@@ -8,7 +8,8 @@
       %form.form-inline.my-2.my-lg-0
         %button.btn.btn-outline-success.my-2.my-sm-0.mr-1
           = link_to 'Settings', edit_user_registration_path
-    %form.form-inline.my-2.my-lg-0
-      %button.btn.btn-outline-success.my-2.my-sm-0
-        = link_to 'Sign Out', destroy_user_session_path, method: :delete
+    -if user_signed_in?
+      %form.form-inline.my-2.my-lg-0
+        %button.btn.btn-outline-success.my-2.my-sm-0
+          = link_to 'Sign Out', destroy_user_session_path, method: :delete
 
