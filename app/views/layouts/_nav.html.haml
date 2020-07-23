@@ -1,0 +1,10 @@
+%nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  %a.navbar-brand{:href => "#"} Password Bank
+  %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    %ul.navbar-nav.mr-auto
+    %form.form-inline.my-2.my-lg-0
+      %button.btn.btn-outline-success.my-2.my-sm-0
+        = link_to 'Sign Out', destroy_user_session_path, method: :delete
+
