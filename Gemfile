@@ -17,6 +17,7 @@ gem 'haml-rails'
 
 group :development, :test do
   gem 'pry'
+  gem 'sqlite3', '~> 1.4'
 end
 
 group :development do
