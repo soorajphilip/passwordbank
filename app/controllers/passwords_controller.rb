@@ -1,10 +1,10 @@
 class PasswordsController < ApplicationController
   before_action :set_password, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:show, :index]
+
   # GET /passwords
   # GET /passwords.json
   def index
-    @passwords = Password.all
+    @passwords = current_user.passwords
   end
 
   # GET /passwords/1
@@ -69,6 +69,6 @@ class PasswordsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def password_params
-      params.require(:password).permit(:title, :password)
+      params.require(:password).permit(:title, :password, :user_id)
     end
 end
