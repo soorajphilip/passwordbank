@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :passwords
   devise_scope :user do
     unauthenticated do
       root 'devise/sessions#new', as: :unauthenticated_root
@@ -9,6 +10,4 @@ Rails.application.routes.draw do
       root 'passwords#index', as: :authenticated_root
     end
   end
-
-  resources :passwords
 end
