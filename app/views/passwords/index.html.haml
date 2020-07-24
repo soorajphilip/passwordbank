@@ -1,6 +1,5 @@
 .container.center_div
   %h1 Listing Your passwords
-
   .row
     .col-md-4.col-md-offset-6
       %table.table
@@ -17,6 +16,6 @@
               %td= password.password
               %td= link_to 'Edit', edit_password_path(password)
               %td= link_to 'Destroy', password, method: :delete, data: { confirm: 'Are you sure?' }
-            %br
-            = link_to 'New Password', new_password_path
+          %br
+          = link_to 'New Password', new_password_path
 
