@@ -12,22 +12,22 @@ Installation:-
 
 1. Clone the repo
 
-	"$ git@github.com:soorajphilip/passwordbank.git"
+		"$ git@github.com:soorajphilip/passwordbank.git"
 
 2. Navigate to downloaded folder
 
-	"$ cd passwordbank"
+		"$ cd passwordbank"
 
 3. Bundle gems
 
-	"$ bundle install --without production"
+		"$ bundle install --without production"
 
 4. Run server
 
-	"$ rails s"
+		"$ rails s"
 
 5. Website
 
-	"localhost:3000"
+		"localhost:3000"
 
 6. Enjoy!
