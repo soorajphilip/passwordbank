@@ -1,4 +1,4 @@
-<h1>A simple app for storing passwords of different sites,softwares,other apps etc,.</h1>
+<h3>A simple app for storing passwords of different sites,softwares,other apps etc,.</h3>
 
 Vesion Info:-
 
