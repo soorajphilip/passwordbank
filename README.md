@@ -1,24 +1,33 @@
-# README
+INFO:-
+	 A simple app for storing passwords of different sites,softwares,other apps etc,.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Vesion Info:-
 
-Things you may want to cover:
+	Ruby version ~ 2.7.0
+	Rails version ~ 6.0.3.2
+	sqlite version ~ 1.4
 
-* Ruby version
 
-* System dependencies
+Installation:-
 
-* Configuration
+1. Clone the repo
 
-* Database creation
+	"$ git@github.com:soorajphilip/passwordbank.git"
 
-* Database initialization
+2. Navigate to downloaded folder
 
-* How to run the test suite
+	"$ cd passwordbank"
 
-* Services (job queues, cache servers, search engines, etc.)
+3. Bundle gems
 
-* Deployment instructions
+	"$ bundle install --without production"
 
-* ...
+4. Run server
+
+	"$ rails s"
+
+5. Website
+
+	"localhost:3000"
+
+6. Enjoy!
